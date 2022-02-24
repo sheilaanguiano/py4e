@@ -1,7 +1,22 @@
-# Hello from Python
+
 def computepay(h, r):
-    return 42.37
+    h = float(hrs)
+    r = float(rate)
+    if h <= 40:
+        return ( h * r )
+    else: 
+        base = 40 * r
+        # print(base)
+        extra_h = h - 40
+        extra_r = r * 1.5
+        # print(extra_h)
+        # print(extra_r)
+        return (base + extra_h * extra_r) 
+
 
 hrs = input("Enter Hours:")
-p = computepay(10, 20)
-print("Pay", p)
+rate = input("Enter Rate:")
+
+
+
+print("Pay", computepay( hrs, rate))
